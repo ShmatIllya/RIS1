@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans-2.0.xsd">
+
+    <!--Создание бина для класса AlphanumericStringGenerator.-->
+    <bean id="alphanumericStringGenerator" class="org.example.generator.AlphanumericStringGenerator">
+        <!--Внедрение значения "append" типа String как аргумент конструктора-->
+        <constructor-arg type="java.lang.String" value="abcdefghijkABCDEFGHIJK123467890" />
+    </bean>
+
+    <!--Создание бина для класса DelimitedIntegerStringGenerator.-->
+     <bean id="delimitedIntegerStringGenerator" class="org.example.generator.DelimitedIntegerStringGenerator">
+        <!--Внедрение полей класса при помощи сеттеров-->
+        <constructor-arg type="java.lang.String" value="," />
+        <constructor-arg type="int" value="20" />
+    </bean>
+
+    <!--Создание бина для класса GeneratorService.-->
+    <bean id="generatorService" class="org.example.service.GeneratorService">
+        <!--Внедрение бина с id "alphanumericStringGenerator" как поле stringGenerator с использованием сеттера-->
+        <property name="stringGenerator" ref="delimitedIntegerStringGenerator"/>
+        <!--Внедрение значения 20 в поле "text" с использованием сеттера-->
+        <property name="stringsCount" value="3" />
+        <property name="length" value="20" />
+    </bean>
+
+</beans>

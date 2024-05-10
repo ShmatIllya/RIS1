@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.example.lab8">
+    <class name="Developer" table="CUSTOMERS2">
+        <meta attribute="class-description">
+            This class contains customer’s details.
+        </meta>
+        <id name="id" type="int" column="ID">
+            <generator class="native"/>
+        </id>
+        <property name="lastName" column="LAST_NAME" type="string"/>
+        <property name="firstName" column="FIRST_NAME" type="string"/>
+        <property name="otchestvo" column="OTCHESTVO" type="string"/>
+        <property name="birthDate" column="BIRTH_DATE" type="java.util.Date"/>
+        <property name="passportSeries" column="PASSPORT_SERIES" type="string"/>
+        <property name="passportNumber" column="PASSPORT_NUMBER" type="string"/>
+        <property name="homeTown" column="HOME_TOWN" type="string"/>
+        <property name="factAdress" column="FACT_ADRESS" type="string"/>
+        <property name="phone" column="PHONE" type="string"/>
+        <property name="email" column="EMAIL" type="string"/>
+        <property name="workStatus" column="WORK_STATUS" type="java.lang.Boolean"/>
+        <property name="hierarchyStatus" column="HIERARCHY_STATUS" type="string"/>
+        <property name="propiskaAdress" column="PROPISKA_ADRESS" type="string"/>
+        <property name="citizenship" column="CITIZENSHIP" type="string"/>
+    </class>
+</hibernate-mapping>

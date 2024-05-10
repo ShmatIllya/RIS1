@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lists>
+    <customers id="1">
+        <birthDate>2023-03-10T00:00:00+03:00</birthDate>
+        <citizenship>Belarus</citizenship>
+        <email>shmat@mail.ru</email>
+        <factAdress>Uryupinsk</factAdress>
+        <firstName>Ivan</firstName>
+        <hierarchyStatus>Student</hierarchyStatus>
+        <homeTown>Minsk</homeTown>
+        <lastName>Ivanov</lastName>
+        <otchestvo>Viktorovich</otchestvo>
+        <passportNumber>11we1111</passportNumber>
+        <passportSeries>MC</passportSeries>
+        <phone>375299999999</phone>
+        <propiskaAdress>Minsk, Tolstoy street</propiskaAdress>
+        <workStatus>true</workStatus>
+    </customers>
+    <customers id="8">
+        <birthDate>2023-03-10T00:00:00+03:00</birthDate>
+        <citizenship>Belarus</citizenship>
+        <email>shmat@mail.ru</email>
+        <factAdress>Uryupinsk</factAdress>
+        <firstName>Petrov</firstName>
+        <hierarchyStatus>Student</hierarchyStatus>
+        <homeTown>Minsk</homeTown>
+        <lastName>Ilya</lastName>
+        <otchestvo>Viktorovich</otchestvo>
+        <passportNumber>11we1111</passportNumber>
+        <passportSeries>MC</passportSeries>
+        <phone>375299999999</phone>
+        <propiskaAdress>Minsk, Tolstoy street</propiskaAdress>
+        <workStatus>true</workStatus>
+    </customers>
+</lists>

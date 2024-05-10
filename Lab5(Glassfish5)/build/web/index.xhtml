@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Hello from Facelets!
+        
+        
+            
+          
+    <br></br>
+   
+        <h:form>
+            
+          <!--  <h:commandButton action="hello" value="Move to hello.xhtml"/>
+            <h:commandButton action="#{newMB.moveToUser()}" value="Move to user.xhtml"/> -->
+            <p> <select name="Selectid" id ="Selectid"> 
+                    <option value="1">Customers</option>
+                    <option value="2">Colleagues</option>
+                </select></p>
+             Search:<br></br><input type="text" value="2" id="input" name="input" required="true" requiredMessage="Input fucking text!"/>
+                        <h:commandButton action="#{newMB.findByID(request.getParameter('input'), request.getParameter('Selectid'))}" value="Search Field"/>
+                        <br></br>
+                        
+             Delete:<br></br><input type="text" value="2" id="input2" name="input2" required="true" requiredMessage="Input fucking text!"/>
+                        <h:commandButton action="#{newMB.DeleteByID(request.getParameter('input2'), request.getParameter('Selectid'))}" value="Delete Field"/>
+                        <br></br>
+                        --------------------------------------------------------
+                        
+                        <h1>Customer Insert</h1>
+                        
+                                <p> <select name="AddSelect" id="AddSelect" >
+                                        <option value="0" selected="selected">ID</option>
+                                        <option value="1">Discount code</option>
+                                        <option value="2">Zip</option>
+                                        <option value="3">Name</option>
+                                        <option value="4">Address1</option>
+                                        <option value="5">Address2</option>
+                                        <option value="6">City</option>
+                                        <option value="7">State</option>
+                                        <option value="8">Phone</option>
+                                        <option value="9">Fax</option>
+                                        <option value="10">Email</option>
+                                        <option value="11">Credit Limit</option>
+                                    </select></p>
+                        <input type="text" value="2" id="AddText" name="AddText" required="true" requiredMessage="Input fucking text!"/>
+                                <br></br>
+                                <h:commandButton action="#{newMB.setCustomerStrings(request.getParameter('AddText'), request.getParameter('AddSelect'))}" value="Click Me"/>
+                                <h:commandButton action="#{newMB.AddCustomer()}" value="Execute Insert"/>
+                                
+                                <br></br>
+                                ------------------------------------------------------
+                                <br></br>
+                                ------------------------------------------------------
+                                <h1>Colleague Insert</h1>
+                                
+                                <p> <select name="AddSelect2" id="AddSelect2" >
+                                        <option value="0" selected="selected">ID</option>
+                                        <option value="1">First name</option>
+                                        <option value="2">Last name</option>
+                                        <option value="3">Title</option>
+                                        <option value="4">Department</option>
+                                        <option value="5">Email</option>
+                                    </select></p>
+                        <input type="text" value="2" id="AddText2" name="AddText2" required="true" requiredMessage="Input fucking text!"/>
+                                <br></br>
+                                <h:commandButton action="#{newMB.setColleaguesStrings(request.getParameter('AddText2'), request.getParameter('AddSelect2'))}" value="Click Me"/>
+                                <h:commandButton action="#{newMB.AddColleague()}" value="Execute Insert"/>
+                                <br></br>
+                                ------------------------------------------------------
+                                <h1>Customer Update</h1>
+                                <p> <select name="UpdateSelect" id="UpdateSelect">
+                                        <option value="0" selected="selected">Customer ID</option>
+                                        <option value="1">NEW Discount code</option>
+                                        <option value="2">NEW Zip</option>
+                                        <option value="3">NEW Name</option>
+                                        <option value="4">NEW Address1</option>
+                                        <option value="5">NEW Address2</option>
+                                        <option value="6">NEW City</option>
+                                        <option value="7">NEW State</option>
+                                        <option value="8">NEW Phone</option>
+                                        <option value="9">NEW Fax</option>
+                                        <option value="10">NEW Email</option>
+                                        <option value="11">NEW Credit Limit</option>
+                                    </select></p>
+                        <input type="text" value="2" id="UpdateText" name="UpdateText" required="true" requiredMessage="Input fucking text!"/>
+                                <br></br>
+                                <h:commandButton action="#{newMB.setCustomerStrings(request.getParameter('UpdateText'), request.getParameter('UpdateSelect'))}" value="Click Me"/>
+                                <h:commandButton action="#{newMB.UpdateCustomer()}" value="Execute Update"/>
+                                
+                                <br></br>
+                                ------------------------------------------------------
+                                <h1>Colleague Update</h1>
+                                <p> <select name="UpdateSelect2" id="UpdateSelect2">
+                                        <option value="0" selected="selected">ID</option>
+                                        <option value="1">NEW First name</option>
+                                        <option value="2">NEW Last name</option>
+                                        <option value="3">NEW Title</option>
+                                        <option value="4">NEW Department</option>
+                                        <option value="5">NEW Email</option>
+                                    </select></p>
+                        <input type="text" value="2" id="UpdateText2" name="UpdateText2" required="true" requiredMessage="Input fucking text!"/>
+                                <br></br>
+                                <h:commandButton action="#{newMB.setColleaguesStrings(request.getParameter('UpdateText2'), request.getParameter('UpdateSelect2'))}" value="Click Me"/>
+                                <h:commandButton action="#{newMB.UpdateColleague()}" value="Execute Update"/>
+                                
+        </h:form>
+    </h:body>
+</html>
+

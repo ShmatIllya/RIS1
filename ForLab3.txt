@@ -1,0 +1,1 @@
+jdbc:mysql://localhost:3306/alesia?zeroDateTimeBehavior=convertToNull&amp;useTimeZone=true&amp;serverTimezone=UTC&amp;autoReconnect=true&amp;useSSL=false"/>
